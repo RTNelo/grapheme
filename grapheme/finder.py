@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from enum import Enum
 
 from grapheme.grapheme_property_group import GraphemePropertyGroup as G
@@ -193,7 +194,7 @@ class GraphemeIterator:
     def __iter__(self):
         return self
 
-    def __next__(self):
+    def next(self):
         for codepoint in self.str_iter:
             should_break, state = self.state(get_group(codepoint))
             self.state = state

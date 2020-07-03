@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
+
 import os
 from unittest import TestCase
 
@@ -77,6 +79,8 @@ def read_test_data():
     TEST_CASES = []
     with open(os.path.join(os.path.dirname(__file__), "../unicode-data/GraphemeBreakTest.txt"), 'r') as f:
         for line in f.readlines():
+            line = line.decode('utf-8')
+
             if line.startswith("#"):
                 continue
 
@@ -84,7 +88,7 @@ def read_test_data():
 
             expected_graphemes = [
                 "".join([
-                    chr(int(char, 16)) for char in cluster.split("×") if char.strip()
+                    unichr(int(char, 16)) for char in cluster.split("×") if char.strip()
                 ])
                 for cluster in test_data.split("÷") if cluster.strip()
             ]

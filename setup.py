@@ -7,9 +7,9 @@ with codecs_open('README.rst', encoding='utf-8') as f:
     long_description = f.read()
 
 
-setup(name='grapheme',
-      version='0.6.0',
-      description=u"Unicode grapheme helpers",
+setup(name='grapheme-py2',
+      version='0.6.0-py2-1',
+      description=u"grapheme backported to Python 2.7",
       long_description=long_description,
       keywords='',
       author=u"Alvin Lindstam",
@@ -27,10 +27,7 @@ setup(name='grapheme',
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
       ],
       )
